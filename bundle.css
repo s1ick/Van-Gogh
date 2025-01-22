@@ -870,6 +870,9 @@ template {
     display: none;
   }
 }
+.product {
+  position: relative;
+}
 .product__section {
   margin-bottom: 20px;
   position: relative;
