@@ -33,13 +33,11 @@ body {
 }
 
 .products {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 .main-title {
   font-family: "Korataki";
@@ -94,7 +92,11 @@ body {
     margin-bottom: 40px;
   }
   .products {
-    gap: 29px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 29px;
+    grid-row-gap: 29px;
   }
   .layout {
     max-width: 1328px;
@@ -105,10 +107,15 @@ body {
     font-size: 32px;
   }
   .products {
-    gap: 40px;
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 40px;
+    grid-row-gap: 40px;
   }
   .layout {
     max-width: 768px;
+    padding: 0 44px;
   }
   .top-section {
     justify-content: space-between;
@@ -123,7 +130,10 @@ body {
     font-size: 24px;
   }
   .products {
-    gap: 10px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
   .layout {
     max-width: 390px;
