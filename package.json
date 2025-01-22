@@ -1,0 +1,38 @@
+{
+  "name": "rolluptemplate",
+  "version": "1.0.0",
+  "description": "Test Work",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx rollup --config rollup.config.mjs",
+    "start": "npx rollup --config rollup.config.dev.mjs --watch"
+  },
+  "author": "Matveev Ivan",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-html": "^1.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^3.2.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-pug": "^1.1.1",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-serve": "^2.0.1",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0"
+  },
+  "dependencies": {
+    "scss-reset": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1ick/Van-Gogh-Link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s1ick/Van-Gogh-Link/issues"
+  },
+  "homepage": "https://github.com/s1ick/Van-Gogh-Link"
+}

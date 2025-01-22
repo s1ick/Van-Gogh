@@ -1,0 +1,17 @@
+mixin widget(sale, image, text, oldPrice, newPrice, fixPrice)
+    if oldPrice != "" || newPrice != "" || fixPrice != "" || sale != ""
+        .product
+            if sale != "" 
+                span.product__sale= sale
+            figure.product__section.product-section
+                img.product__image(src=image, alt=image)
+                button.product__subscription Подробнее
+            .product-footer 
+                .product-footer__text= text
+                .product-footer__prices 
+                    if oldPrice != ""
+                        span.new= oldPrice + ' ₽'
+                    if newPrice != ""
+                        span.old= newPrice + ' ₽'
+                    if fixPrice != ""
+                        span.fix= fixPrice + ' ₽'
