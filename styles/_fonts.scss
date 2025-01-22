@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Korataki";
+  src:
+    local("Korataki Regular"),
+    local("Korataki-Regular"),
+    url("fonts/KoratakiRg-Regular.woff2") format("woff2"),
+    url("fonts/KoratakiRg-Regular.woff") format("woff"),
+    url("fonts/KoratakiRg-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;;
+  src:
+    url("fonts/Lato-Bold.woff2") format("woff2"),
+    url("fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;;
+  src:
+    url("fonts/Lato-Regular.woff2") format("woff2"),
+    url("fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("fonts/Roboto-Bold.woff2") format("woff2"),
+    url("fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("fonts/Roboto-Regular.woff2") format("woff2"),
+    url("fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("fonts/Roboto-SemiBold.woff2") format("woff2"),
+    url("fonts/Roboto-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,115 @@
+@use "fonts" as *;
+@use "colors" as c;
+.product {
+    width: 320px;
+    position: relative;
+    @media (max-width: 1600px) {
+        width: 288px;
+    }
+    @media (max-width: 768px) {
+        width: 320px;
+    }
+
+    @media (max-width: 390px) {
+        width: 155px;
+    }
+    &__section {
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    &__subscription {
+        border-radius: 100px;
+        background-color: c.$orange;
+        color: #fff;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0 48px;
+        height: 48px;
+        line-height: 48px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0; 
+        visibility: hidden;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease; 
+    }
+    &__sale {
+        position: absolute;
+        width: 126px;
+        height: 38px;
+        border-radius: 100px;
+        background: rgb(35, 24, 21);
+        color: rgb(255, 255, 255);
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+    }
+
+    &:hover {
+        & .product__subscription {
+            opacity: 1; 
+            visibility: visible;
+        }
+    }
+}
+
+.product-footer {
+    margin-bottom: 50px;
+
+    &__text {
+        font-family: "Lato", sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    &__prices {
+        & span {
+            font-weight: 700;
+            line-height: 140%;
+            display: inline-flex;
+            margin-right: 16px;
+
+            &.new {
+                color: c.$orange;
+            }
+
+            &.old {
+                color: c.$light-gray;
+            }
+
+            &.fix {
+                color: c.$dark-gray;
+            }
+        }
+    }
+}
+@media (max-width: 390px) {
+    .product-footer {
+        &__text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 11px;
+        }
+        &__prices {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}

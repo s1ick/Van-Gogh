@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Korataki";
+  src: local("Korataki Regular"), local("Korataki-Regular"), url("../fonts/KoratakiRg-Regular.woff2") format("woff2"), url("../fonts/KoratakiRg-Regular.woff") format("woff"), url("../fonts/KoratakiRg-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-SemiBold.woff2") format("woff2"), url("../fonts/Roboto-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.product {
+  width: 320px;
+  position: relative;
+}
+@media (max-width: 1600px) {
+  .product {
+    width: 288px;
+  }
+}
+@media (max-width: 768px) {
+  .product {
+    width: 320px;
+  }
+}
+@media (max-width: 390px) {
+  .product {
+    width: 155px;
+  }
+}
+.product__section {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.product__subscription {
+  border-radius: 100px;
+  background-color: #e45302;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 48px;
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  /* Начальное состояние – невидимо */
+  visibility: hidden;
+  /* Убирает элемент из потока, но позволяет анимировать */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Анимация */
+}
+.product__sale {
+  position: absolute;
+  width: 126px;
+  height: 38px;
+  border-radius: 100px;
+  background: #231815;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+}
+.product:hover .product__subscription {
+  opacity: 1;
+  /* Показываем элемент */
+  visibility: visible;
+  /* Возвращаем элемент в поток */
+}
+
+.product-footer {
+  margin-bottom: 50px;
+}
+.product-footer__text {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.product-footer__prices span {
+  font-weight: 700;
+  line-height: 140%;
+  display: inline-flex;
+  margin-right: 16px;
+}
+.product-footer__prices span.new {
+  color: #e45302;
+}
+.product-footer__prices span.old {
+  color: #808080;
+}
+.product-footer__prices span.fix {
+  color: #231815;
+}
+
+@media (max-width: 390px) {
+  .product-footer__text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 11px;
+  }
+  .product-footer__prices {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

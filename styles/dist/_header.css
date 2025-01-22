@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Korataki";
+  src: local("Korataki Regular"), local("Korataki-Regular"), url("../fonts/KoratakiRg-Regular.woff2") format("woff2"), url("../fonts/KoratakiRg-Regular.woff") format("woff"), url("../fonts/KoratakiRg-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-SemiBold.woff2") format("woff2"), url("../fonts/Roboto-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 12px;
+}
+.header__logo-group {
+  display: flex;
+  align-items: center;
+  width: 217px;
+  min-width: 217px;
+  margin-right: 16px;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 479px;
+  width: 100%;
+}
+.header__rs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: stretch;
+}
+.header__rs .button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  border-radius: 100px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+  background: #231815;
+  height: 39px;
+  width: 138px;
+  margin-left: 23px;
+}
+.header__rs .button__icon {
+  width: 32.67px;
+  height: 32px;
+  position: relative;
+  margin-right: 5px;
+}
+.header__rs .button__icon .count {
+  position: absolute;
+  background: white;
+  color: #1a1a1a;
+  font-family: "Inter", serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 1;
+}
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 123;
+}
+.header__burger div {
+  background-color: #231815;
+  height: 4px;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.input-wrapper {
+  width: 170px;
+  height: 39px;
+  border-radius: 88.64px;
+  border: 1px solid #F5F5F5;
+  padding: 0 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: width 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+  margin-left: 16px;
+}
+.input-wrapper__search {
+  width: 21px;
+  height: 21px;
+  flex: 1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.input-wrapper__icon {
+  max-width: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.header-list-item__link {
+  color: #231815;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+.header-list-item:hover .header-list-item__link {
+  opacity: 0.7;
+}
+
+@media (max-width: 770px) {
+  .header__list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    max-width: none;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px 0;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .header__list.open {
+    display: flex;
+    opacity: 1;
+    background-color: #231815;
+    top: 40px;
+  }
+  .header__list.open .header-list-item {
+    margin-bottom: 20px;
+  }
+  .header__list.open .header-list-item__link {
+    color: #fff;
+  }
+  .header__burger {
+    display: flex;
+  }
+  .header__burger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+    background-color: #fff;
+  }
+  .header__burger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  .header__burger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+    background-color: #fff;
+  }
+
+  .header-rs {
+    display: none;
+  }
+}
+@media (max-width: 1600px) {
+  .input-wrapper {
+    width: 39px;
+    height: 39px;
+    background: #231815;
+    padding: 0;
+    justify-content: center;
+    transform: scale(1);
+  }
+  .input-wrapper svg path {
+    fill: #fff;
+  }
+
+  .input-wrapper__search {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .input-wrapper__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .input-wrapper:hover {
+    width: 170px;
+    padding: 0 21px;
+    transform: scale(1.2);
+    background-color: #fff;
+  }
+  .input-wrapper:hover svg path {
+    fill: #231815;
+  }
+
+  .input-wrapper:hover .input-wrapper__search {
+    width: 21px;
+    height: 21px;
+    display: flex;
+  }
+
+  .input-wrapper:hover .input-wrapper__icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .input-active .header__list {
+    display: none;
+  }
+}

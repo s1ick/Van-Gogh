@@ -1,0 +1,16 @@
+// src/styles/_mixins.scss
+@mixin text-size($desktop-size, $mobile-size) {
+  font-size: $desktop-size; 
+
+  @media (max-width: 1300px) {
+    & { 
+      font-size: $mobile-size; 
+    }
+  }
+}
+
+@mixin mobile($breakpoint: 1300px) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
